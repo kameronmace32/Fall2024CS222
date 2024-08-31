@@ -1,21 +1,22 @@
-import 'package:leap_year_calculator/leap_year_calculator.dart';
+import 'package:grade_tool/grade_tool.dart';
 import 'package:test/test.dart';
 
 void main() {
-  final calculator = LeapYearCalculator();
+  final gradeCalculator = GradeCalculator();
 
-  test('2001 is not a leap year', () {
-    final result = calculator.isLeapYear(2001);
-    expect(result, false);
+  test('95 is an A', () {
+    final result = gradeCalculator.gradeTool(95);
+    expect(result, 'A');
   });
 
-  test('2004 is a leap year', () {
-    final result = calculator.isLeapYear(2004);
-    expect(result, true);
+  test('89 is a B', () {
+    final result = gradeCalculator.gradeTool(89);
+    expect(result, 'B');
   });
 
-  test('1800 is not a leap year', () {
-    final result = calculator.isLeapYear(1800);
-    expect(result, false);
-  });
+  //typedef TestDataRow = ({String alphabeticalGrade, int numericalGrade});
+
+  //final Set<({String alphabeticalGrade, int numericalGrade})> data = {
+  //(numericalGrade: 99, alphabeticalGrade: 'A'),
+  //};
 }

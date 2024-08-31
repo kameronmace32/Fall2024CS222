@@ -1,17 +1,17 @@
-class LeapYearCalculator {
-  bool isLeapYear(int year) {
-    if (_isDivisibleByFour(year) && !_isDivisibleByOneHundred(year)) {
-      return true;
+class GradeCalculator {
+  gradeTool(numericalGrade) {
+    if (numericalGrade <= 59) {
+      return 'F';
+    } else if (numericalGrade <= 69) {
+      return 'D';
+    } else if (numericalGrade <= 79) {
+      return 'C';
+    } else if (numericalGrade <= 89) {
+      return 'B';
+    } else if (numericalGrade <= 100) {
+      return 'A';
     } else {
-      return false;
+      return "error";
     }
-  }
-
-  bool _isDivisibleByFour(int year) {
-    return year % 4 == 0;
-  }
-
-  bool _isDivisibleByOneHundred(int year) {
-    return year % 100 == 0;
   }
 }
